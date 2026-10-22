@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogicLoop — Interactive Quiz Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Global Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Logic<span>Loop</span></span>
+      </div>
+      <div class="nav-stats">
+        <span class="stat-badge">Best Score: <strong id="nav-best-score">0</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport Container -->
+  <main class="main-container">
+
+    <!-- Screen 1: Home / Category Selection -->
+    <section id="welcome-screen" class="view-screen active">
+      <div class="hero-banner">
+        <span class="tagline">Interactive Skill Assessment</span>
+        <h1>Challenge Your Knowledge</h1>
+        <p class="subtitle">
+          Test and strengthen your core frontend foundations across Git, GitHub, HTML, and CSS with real-time feedback.
+        </p>
+      </div>
+
+      <div class="selection-wrapper">
+        <h2>Select a Quiz Category</h2>
+        <div class="categories-grid">
+          <button type="button" class="category-card" data-category="Git">
+            <div class="card-icon">🔀</div>
+            <h3>Git</h3>
+            <p>5 Questions &bull; Version Control Basics</p>
+          </button>
+
+          <button type="button" class="category-card" data-category="GitHub">
+            <div class="card-icon">🐙</div>
+            <h3>GitHub</h3>
+            <p>5 Questions &bull; Remotes &amp; Collaboration</p>
+          </button>
+
+          <button type="button" class="category-card" data-category="HTML">
+            <div class="card-icon">🌐</div>
+            <h3>HTML</h3>
+            <p>5 Questions &bull; Semantics &amp; Structure</p>
+          </button>
+
+          <button type="button" class="category-card" data-category="CSS">
+            <div class="card-icon">🎨</div>
+            <h3>CSS</h3>
+            <p>5 Questions &bull; Selectors &amp; Flexbox</p>
+          </button>
+
+          <button type="button" class="category-card full-span active-choice" data-category="all">
+            <div class="card-icon">⚡</div>
+            <h3>All Topics</h3>
+            <p>20 Questions &bull; Complete Frontend Diagnostic</p>
+          </button>
+        </div>
+
+        <div class="action-dock">
+          <button id="start-btn" class="primary-btn">Start Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 2: Active Quiz Area -->
+    <section id="quiz-screen" class="view-screen">
+      <!-- Quiz Header & Progress Tracker -->
+      <div class="quiz-header">
+        <div class="meta-row">
+          <span id="quiz-category-tag" class="category-pill">Category</span>
+          <span id="question-tracker" class="tracker-text">Question 1 of 5</span>
+          <span class="score-tracker">Score: <strong id="live-score">0</strong></span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Question Prompt Box -->
+      <div class="question-container">
+        <span id="question-difficulty" class="difficulty-tag">Easy</span>
+        <h2 id="question-prompt">Question placeholder text goes here...</h2>
+      </div>
+
+      <!-- 4 Clickable Answer Options -->
+      <div id="options-container" class="options-grid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Interactive Explanation & Next Step Area -->
+      <div id="feedback-panel" class="feedback-panel hidden">
+        <div class="feedback-status">
+          <span id="feedback-icon" class="status-icon">✓</span>
+          <span id="feedback-heading" class="status-text">Correct!</span>
+        </div>
+        <p id="explanation-text" class="explanation-body"></p>
+        <div class="panel-action">
+          <button id="next-btn" class="primary-btn">Next Question ➔</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: Results & Diagnostic Screen -->
+    <section id="result-screen" class="view-screen">
+      <div class="results-card">
+        <div class="score-circle">
+          <span id="result-percentage">0%</span>
+          <small>Score</small>
+        </div>
+
+        <h2 id="result-headline">Quiz Completed!</h2>
+        <p id="result-summary">You scored 0 out of 0 questions correctly.</p>
+
+        <div class="score-breakdown">
+          <div class="breakdown-item correct">
+            <span class="label">Correct</span>
+            <span id="count-correct" class="value">0</span>
+          </div>
+          <div class="breakdown-item incorrect">
+            <span class="label">Incorrect</span>
+            <span id="count-incorrect" class="value">0</span>
+          </div>
+          <div class="breakdown-item best">
+            <span class="label">Best Record</span>
+            <span id="count-best" class="value">0</span>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button id="restart-btn" class="primary-btn">Restart Quiz</button>
+          <button id="home-btn" class="secondary-btn">Select Another Category</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Footer -->
+  <footer class="footer">
+    <p>&copy; LogicLoop &bull; Interactive Frontend Practice &bull; Built with HTML, CSS, JavaScript, and Git</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
