@@ -4,12 +4,6 @@ LogicLoop is a modern, responsive web application designed to evaluate and sharp
 
 ---
 
-## 🚀 Live Demo
-
-- **Hosted URL:** [https://<your-username>.github.io/logicloop-quiz-platform/](https://<your-username>.github.io/logicloop-quiz-platform/)
-
----
-
 ## ✨ Key Features
 
 - **Category Filtering & Diagnostic Mode:** Test individual domains (Git, GitHub, HTML, CSS — 5 questions each) or launch a full 20-question randomized diagnostic.
