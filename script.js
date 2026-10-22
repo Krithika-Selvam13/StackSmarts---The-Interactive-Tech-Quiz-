@@ -172,10 +172,10 @@ const questions = [
     difficulty: "Easy",
     question: "Which tag creates a hyperlink?",
     options: [
-      "<img>",
-      "<p>",
-      "<a>",
-      "<h1>"
+      "img",
+      "p",
+      "a",
+      "h1"
     ],
     answer: 2,
     explanation: "The <a> element creates a hyperlink. Its href attribute specifies the destination."
@@ -200,10 +200,10 @@ const questions = [
     difficulty: "Medium",
     question: "Which HTML element is most appropriate for the main content of a page?",
     options: [
-      "<footer>",
-      "<main>",
-      "<aside>",
-      "<head>"
+      "footer",
+      "main",
+      "aside",
+      "head"
     ],
     answer: 1,
     explanation: "The <main> element represents the dominant content of the document's body."
